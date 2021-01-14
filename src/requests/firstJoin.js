@@ -1,0 +1,7 @@
+module.exports = (sock, user, userSessionId) => {
+    console.log(user._id)
+    sock.write('{"t":"xt","b":{"r":-1,"o":{"cmd":"cvu","o":{"PCstRatio":7.47,"PChpDelta":1640,"PChpBase1":360,"baseHit":0,"intSPtoDPS":10,"resistRating":17,"curveExponent":0.66,"baseCritValue":1.5,"PChpGoal100":4000,"intLevelCap":100,"baseMiss":0.1,"baseParry":0.03,"GstBase":12,"modRating":3,"baseResistValue":0.7,"baseBlockValue":0.7,"intHPperEND":5,"baseHaste":0,"baseBlock":0,"statsExponent":1,"PChpBase100":2000,"intAPtoDPS":10,"PCstBase":15,"baseCrit":0.05,"baseEventValue":0.05,"GstGoal":572,"PChpGoal1":400,"GstRatio":5.6,"intLevelMax":100,"bigNumberBase":8,"PCstGoal":762,"baseDodge":0.04,"PCDPSMod":0.85}}}}\0')
+    sock.write(`<msg t='sys'><body action='joinOK' r='${userSessionId}'><pid id='1'/><vars /><uLs r='${userSessionId}'><u i='1' m='0' s='0' p='1'><n><![CDATA[elaine]]></n><vars></vars></u></uLs></body></msg>\0`)
+    sock.write(`{"t":"xt","b":{"r":-1,"o":{"cmd":"moveToArea","areaName":"battleonid-1","uoBranch":[{"strFrame":"Enter","intMP":100,"intLevel":25,"entID":1,"strPad":"Spawn","intMPMax":100,"intHP":100,"afk":false,"intHPMax":100,"ty":0,"tx":0,"intState":1,"entType":"p","showHelm":false,"showCloak":true,"strUsername":"arch","uoName":"arch"}],"strMapFileName":"battleon/town-battleon-7aug20.swf","intType":"2","monBranch":[],"sExtra":"","areaId":${userSessionId},"strMapName":"battleon"}}}\0`)
+    sock.write('%xt%server%-1%You joined battleon!%\0')
+}

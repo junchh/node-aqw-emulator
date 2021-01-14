@@ -1,0 +1,35 @@
+const mongoose = require('mongoose')
+
+const UserSchema = mongoose.Schema({
+    _id: Number,
+    username: String,
+    password: String,
+    email: String,
+    gender: String,
+    accessLevel: Number,
+    isFounder: Number,
+    UpgradeDays: Number,
+    lastArea: String,
+    mapName: String,
+    level: Number,
+    gold: Number,
+    coins: Number,
+    bagSlots: Number,
+    bankSlots: Number,
+    houseSlots: Number,
+    hairId: Number,
+    colorBase: Number,
+    colorAccessory: Number,
+    colorTrim: Number,
+    colorSkin: Number,
+    colorEye: Number,
+    colorHair: Number,
+    intelligence: Number,
+    luck: Number,
+    wisdom: Number,
+    strength: Number,
+    dexterity: Number,
+    online: Number,
+})
+
+module.exports = mongoose.model('user', UserSchema)

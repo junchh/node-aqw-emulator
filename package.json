@@ -1,0 +1,17 @@
+{
+  "name": "asyncquest-gameserver",
+  "version": "1.0.0",
+  "description": "A simple TCP based multiplayer game server.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon src/index.js"
+  },
+  "author": "Arch",
+  "license": "ISC",
+  "dependencies": {
+    "config": "^3.3.1",
+    "fast-xml-parser": "^3.17.4",
+    "mongoose": "^5.9.28"
+  }
+}
